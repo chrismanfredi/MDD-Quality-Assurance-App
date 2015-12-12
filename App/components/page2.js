@@ -16,7 +16,7 @@ class Main extends React.Component {
 		return (
 			<View style={styles.container}>
 				<View style={styles.package}>
-					<Text style={styles.badlabel}> Bad Label, testing</Text>
+					<Text style={styles.badlabel}> Bad Label</Text>
 				<Image source={{uri:'https://en.opensuse.org/images/3/39/Icon-package.png'}} style={styles.packageimg} />	
 				</View>
 				<Text style={styles.scanpackage}> Scan a Package </Text>
