@@ -1,89 +1,34 @@
 'use strict';
 
-var React = require('react-native'),
-	Page2 = require('./page2'),
-	Page3 = require('./page3'),
-	Package = require('./packageComponents/package'),
-	CoffeePackage = require('./packageComponents/package');
-
-
+var React = require('react-native');
+	
 var {
 	Text,
 	View,
 	ScrollView,
-	Giant,
 	StyleSheet,
 	TouchableHighlight,
 	Image,
-	AppStateIOS,
+	AppStateIOS
 } = React;
 
-class Main extends React.Component {
-
-
+class PackageInfo extends React.Component {
+  	
 	render() {
 		return (
 			<ScrollView>
-				<View style={styles.container}>
-
-					<View style={styles.innercontainer}>
-
-						<View style={styles.buttoncontainer}>
-
-			
-							<TouchableHighlight onPress={() => this.Page2()}>
-			
-								<View style={styles.badboxbtn}>
-									<Text style={styles.btnpic}> <Image source={require('../img/badbox.png')} /> </Text>
-								</View>
-			
-							</TouchableHighlight>
-
-							<View style={styles.packageheadertext}>
-								<Text style={styles.packagetext}> Package With 3 Items </Text>
-							</View>
-
-							<TouchableHighlight onPress={() => this.Page2()}>			
-
-								<View style={styles.cancelbtn}>
-									<Text style={styles.cancelbtnpic}> <Image source={require('../img/cancel.png')} /> </Text>
-								</View>			
-			
-							</TouchableHighlight>	
-
-						</View>
-
-
-						
-		
-					<Package description={'this is a description'} title={'Coffee Maker'} option={'Packkage 1'} />
-					
-
-
-
-					<TouchableHighlight style={styles.passbtn} onPress={() => this.boxes()}>
-						
-						<View style={styles.passbuttonsection}>
-							<Text style={styles.passbutton}> Pass </Text>
-						</View>
-			
-					</TouchableHighlight>
-
+				<View style={styles.packageinfo}>
+					<Text>{this.props.descriptions}</Text>
+					<Text>{this.props.title}</Text>
 				</View>
-			</View>
-	</ScrollView>
+			</ScrollView>
+
+
 		);
 	}
 
-
-
-	_handlePress(msg){
-		this.setState({
-			text:msg
-		});
-	}
-
 };
+
 
 var styles = StyleSheet.create({
 	container : {
@@ -181,4 +126,4 @@ var styles = StyleSheet.create({
 	},
 });
 
-module.exports = Main;
+module.exports = PackageInfo;

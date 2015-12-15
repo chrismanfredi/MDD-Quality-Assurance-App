@@ -22,8 +22,13 @@ class Main extends React.Component {
 		passProps: {name: 'Chris Manfredi',
 					school: 'Full Sail University'}
 
-	});
+		});
 	};
+
+
+	Logout(){
+		this.props.navigator.pop();
+	}
 	LoginPage() { 
 		this.props.navigator.push({
 		title: 'Main Page',
@@ -45,7 +50,7 @@ class Main extends React.Component {
 						<Text style={styles.btnpic}> <Image source={require('../img/badlabel.png')} /> </Text>
 					</View>
 			
-					<TouchableHighlight onPress={() => this.LoginPage()}>			
+					<TouchableHighlight onPress={() => this.Logout()}>			
 
 					<View style={styles.logoutbtn}>
 						<Text style={styles.logouttext}> Logout </Text>
