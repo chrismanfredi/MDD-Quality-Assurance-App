@@ -4,7 +4,6 @@ var React = require('react-native'),
 	Page2 = require('./page2')
 
 
-
 var {
 	Text,
 	View,
