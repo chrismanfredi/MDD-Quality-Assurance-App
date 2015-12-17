@@ -20,7 +20,6 @@ var {
 
 class Main extends React.Component {
 
-
 	render() {
 		return (
 			<ScrollView>
@@ -52,13 +51,12 @@ class Main extends React.Component {
 							</TouchableHighlight>	
 
 						</View>
+					    
 
 
-						
-		
-					<Package description={'this is a description'} title={'Coffee Maker'} option={'Packkage 1'} />
-					
 
+
+					    <Package title={'Coffee Maker'} description={'this is a description'} />
 
 
 					<TouchableHighlight style={styles.passbtn} onPress={() => this.boxes()}>
@@ -73,14 +71,6 @@ class Main extends React.Component {
 			</View>
 	</ScrollView>
 		);
-	}
-
-
-
-	_handlePress(msg){
-		this.setState({
-			text:msg
-		});
 	}
 
 };

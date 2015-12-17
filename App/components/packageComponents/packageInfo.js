@@ -18,8 +18,8 @@ class PackageInfo extends React.Component {
 		return (
 			<ScrollView>
 				<View style={styles.packageinfo}>
-					<Text>{this.props.descriptions}</Text>
 					<Text>{this.props.title}</Text>
+					<Text>{this.props.descriptions}</Text>
 				</View>
 			</ScrollView>
 

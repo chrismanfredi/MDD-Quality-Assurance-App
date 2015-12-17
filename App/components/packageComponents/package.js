@@ -35,7 +35,7 @@ class Package extends React.Component {
 				<View style={styles.packagecontent}>			
 					<PackageButton />
 					<PackageImg />
-					<PackageInfo descriptions = {this.props.description} title={this.props.title} />
+					<PackageInfo title={this.props.title} descriptions = {this.props.description} />
 					<PackageConditions option = {this.props.option} />
 
 				</View>	

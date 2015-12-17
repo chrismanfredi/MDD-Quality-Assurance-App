@@ -34,6 +34,7 @@ var styles = StyleSheet.create({
 		borderColor: 'black',
 		borderWidth: 3,
 	},
+	
 });
 
 module.exports = PackageButton;
